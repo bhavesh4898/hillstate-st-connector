@@ -1,0 +1,190 @@
+{
+    "headers": {
+        "schema": "st-schema",
+        "version": "1.0",
+        "interactionType": "discoveryResponse",
+        "requestId": "abc-123-456"
+    },
+    "devices": [
+        {
+            "externalDeviceId": "012511",
+            "friendlyName": "Hall Light 1",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012512",
+            "friendlyName": "Hall Light 2",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012513",
+            "friendlyName": "Hall Light 3",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012521",
+            "friendlyName": "Bedroom 1 Light 1",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012522",
+            "friendlyName": "Bedroom 1 Light 2",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012531",
+            "friendlyName": "Bedroom 2 Light 1",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012532",
+            "friendlyName": "Bedroom 2 Light 2",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012561",
+            "friendlyName": "Kitchen Light 1",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012562",
+            "friendlyName": "Kitchen Light 2",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012563",
+            "friendlyName": "Bathroom Light",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["light"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Light"
+            }
+        },
+        {
+            "externalDeviceId": "012564",
+            "friendlyName": "Bathroom Exhaust",
+            "deviceHandlerType": "c2c-switch",
+            "deviceContext" : {
+                "categories": ["vent"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Exhaust"
+            }
+        },
+        {
+            "externalDeviceId": "012811",
+            "friendlyName": "Hall AC",
+            "deviceHandlerType": "e2f01e6a-5bcf-4c4b-8a75-8458ad7d4b06",
+            "deviceContext" : {
+                "categories": ["air-conditioner"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "AC"
+            }
+        },
+        {
+            "externalDeviceId": "012812",
+            "friendlyName": "Bedroom 1 AC",
+            "deviceHandlerType": "e2f01e6a-5bcf-4c4b-8a75-8458ad7d4b06",
+            "deviceContext" : {
+                "categories": ["air-conditioner"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "AC"
+            }
+        },
+        {
+            "externalDeviceId": "012813",
+            "friendlyName": "Bedroom 2 AC",
+            "deviceHandlerType": "e2f01e6a-5bcf-4c4b-8a75-8458ad7d4b06",
+            "deviceContext" : {
+                "categories": ["air-conditioner"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "AC"
+            }
+        },
+        {
+            "externalDeviceId": "refresh",
+            "friendlyName": "Refresh",
+            "deviceHandlerType": "8df3db37-22b7-4fb4-a74a-c75840a000dc",
+            "deviceContext" : {
+                "categories": ["camera"]
+            },
+            "manufacturerInfo": {
+                "manufacturerName": "HillState",
+                "modelName": "Refresh"
+            }
+        }
+    ]
+}

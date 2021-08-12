@@ -1,0 +1,293 @@
+{
+    "012511": {
+        "externalDeviceId": "012511",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012512": {
+        "externalDeviceId": "012512",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012513": {
+        "externalDeviceId": "012513",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012521": {
+        "externalDeviceId": "012521",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012522": {
+        "externalDeviceId": "012522",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012531": {
+        "externalDeviceId": "012531",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012532": {
+        "externalDeviceId": "012532",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012561": {
+        "externalDeviceId": "012561",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012562": {
+        "externalDeviceId": "012562",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012563": {
+        "externalDeviceId": "012563",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012564": {
+        "externalDeviceId": "012564",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012811": {
+        "externalDeviceId": "012811",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.temperatureMeasurement",
+                "attribute": "temperature",
+                "value": 27,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.thermostatCoolingSetpoint",
+                "attribute": "coolingSetpoint",
+                "value": 22,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012812": {
+        "externalDeviceId": "012812",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.temperatureMeasurement",
+                "attribute": "temperature",
+                "value": 27,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.thermostatCoolingSetpoint",
+                "attribute": "coolingSetpoint",
+                "value": 22,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "012813": {
+        "externalDeviceId": "012813",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.switch",
+                "attribute": "switch",
+                "value": "on"
+            },
+            {
+                "component": "main",
+                "capability": "st.temperatureMeasurement",
+                "attribute": "temperature",
+                "value": 22,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.thermostatCoolingSetpoint",
+                "attribute": "coolingSetpoint",
+                "value": 22,
+                "unit": "C"
+            },
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    },
+    "refresh": {
+        "externalDeviceId": "refresh",
+        "states": [
+            {
+                "component": "main",
+                "capability": "st.healthCheck",
+                "attribute": "healthStatus",
+                "value": "online"
+            }
+        ]
+    }
+}
