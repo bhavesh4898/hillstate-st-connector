@@ -1,5 +1,6 @@
 const fetch = require('sync-fetch')
 const express = require('express');
+const JSONdb = require('simple-json-db');
 const router = express.Router();
 
 // =========== Hillstate API Related ==================
@@ -246,21 +247,16 @@ function commandRequest(requestId, devices) {
 // ================= ST Callback Related ==================
 const client_id = "CLIENT_ID_FROM_ST_DEVELOPER_PAGE"
 const client_secret = "CLIENT_SECRET_FROM_ST_DEVELOPER_PAGE"
-let grant_type;
-let auth_code;
-let access_token;
-let refresh_token;
-let token_url;
-let callback_url;
+const db = new JSONdb('database.json');
 
 function grantCallbackAccess(callbackAuthentication, callbackUrls) {
   if (callbackAuthentication.clientId != client_id) {
     return;
   }
-  grant_type = callbackAuthentication.grantType;
-  auth_code = callbackAuthentication.code;
-  token_url = callbackUrls.oauthToken;
-  callback_url = callbackUrls.stateCallback;
+  db.set('grant_type', callbackAuthentication.grantType);
+  db.set('auth_code', callbackAuthentication.code);
+  db.set('token_url', callbackUrls.oauthToken);
+  db.set('callback_url', callbackUrls.stateCallback);
   getAccessToken();
   console.log("Saved callback details");
 }
@@ -271,18 +267,19 @@ function getAccessToken() {
     "headers": {
       "schema": "st-schema",
       "version": "1.0",
-      "interactionType": (grant_type == "authorization_code") ? "accessTokenRequest" : "refreshAccessTokens",
+      "interactionType": (db.get('grant_type') == "authorization_code") ? "accessTokenRequest" : "refreshAccessTokens",
       "requestId": "abc-123-456"
     },
     "callbackAuthentication": {
-      "grantType": grant_type,
-      "code": auth_code,
-      "refreshToken": refresh_token,
+      "grantType": db.get('grant_type'),
+      "code": db.get('auth_code'),
+      "refreshToken": db.get('refresh_token'),
       "clientId": client_id,
       "clientSecret": client_secret
     }
   }
-  const accessTokenJSON = fetch(token_url, {
+  console.log(requestBody);
+  const accessTokenJSON = fetch(db.get('token_url'), {
     "headers": {
       "accept": "application/json",
       "content-type": "application/json;charset=UTF-8",
@@ -291,9 +288,9 @@ function getAccessToken() {
     "method": "POST",
   }).json();
   console.log(accessTokenJSON);
-  grant_type = "refresh_token";
-  access_token = accessTokenJSON.callbackAuthentication.accessToken;
-  refresh_token = accessTokenJSON.callbackAuthentication.refreshToken;
+  db.set('grant_type', 'refresh_token');
+  db.set('access_token', accessTokenJSON.callbackAuthentication.accessToken);
+  db.set('refresh_token', accessTokenJSON.callbackAuthentication.refreshToken);
   console.log("Saved token details");
 }
 
@@ -304,9 +301,9 @@ function sendRefreshCallback(devices) {
   requestBody.headers.interactionType = "stateCallback";
   requestBody.authentication = {
     "tokenType": "Bearer",
-    "token": access_token
+    "token": db.get('access_token')
   };
-  const response = fetch(callback_url, {
+  const response = fetch(db.get('callback_url'), {
     "headers": {
       "accept": "application/json",
       "content-type": "application/json;charset=UTF-8",

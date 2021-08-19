@@ -4,7 +4,7 @@
   "description": "ST Connector for Hillstate",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon --ignore '*.json' server.js"
   },
   "author": "Bhavesh Dhingra <bhavesh4898@gmail.com>",
   "dependencies": {
@@ -13,6 +13,7 @@
     "express": "4.15.2",
     "morgan": "1.8.1",
     "randomstring": "1.1.5",
+    "simple-json-db": "1.2.3",
     "st-schema": "1.0.5",
     "sync-fetch": "0.3.0",
     "underscore": "1.8.3"
