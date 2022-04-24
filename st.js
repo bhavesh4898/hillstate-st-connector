@@ -12,25 +12,41 @@ const ho = "715"
 
 
 function login() {
-  const loginJSON = fetch("https://www2.hthomeservice.com/proxy/htservice/oauth/token", {
-		"headers": {
-			"accept": "application/json, text/plain, */*",
-			"accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-			"cache-control": "no-cache",
-			"content-type": "application/json;charset=UTF-8",
-			"pragma": "no-cache",
-			"sec-fetch-dest": "empty",
-			"sec-fetch-mode": "cors",
-			"sec-fetch-site": "same-origin",
-			"cookie": "lang=ko-KR"
-		},
-		"referrer": "https://www2.hthomeservice.com/",
-		"referrerPolicy": "strict-origin-when-cross-origin",
-		"body": "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}",
-		"method": "POST",
-		"mode": "cors"
-	}).json();
-  return loginJSON['access_token'];
+  const cookie = fetch("https://www2.hthomeservice.com/login", {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+      "cache-control": "no-cache",
+      "content-type": "application/json",
+      "pragma": "no-cache",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      "Referer": "https://www2.hthomeservice.com/login",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "body": "{\"id\":\"" + username + "\",\"password\":\"" + password + "\",\"rememberMe\":false}",
+    "method": "POST"
+  }).headers.get('set-cookie').split(';')[0];
+
+  const danjiAccessResponseJSON = fetch("https://www2.hthomeservice.com/proxy/bearer/api/v1/user/homepage?siteId=338", {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      "cookie": cookie,
+      "Referer": "https://www2.hthomeservice.com/",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "body": null,
+    "method": "GET"
+  }).json();
+
+  return danjiAccessResponseJSON['resultData']['homepageAccessURL'].split('/')[5];
 }
 
 
